@@ -4,6 +4,7 @@ from config import whitelist
 from ytmusicapi.exceptions import YTMusicUserError
 import hashlib
 import functions
+import os
 
 router = Router()
 
