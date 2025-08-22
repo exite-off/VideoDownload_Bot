@@ -9,7 +9,7 @@ cookie_file_path = 'cookies.txt'
 # Download audio from YouTube music
 async def download_audio(yt_url, query = 'result') -> None:
     ydl_opts = {
-        'cookies': cookie_file_path,
+        'cookiefile': cookie_file_path,
         'format': 'bestaudio/best',
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
