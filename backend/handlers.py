@@ -5,6 +5,7 @@ from ytmusicapi.exceptions import YTMusicUserError
 import hashlib
 import functions
 import os
+from pydub import AudioSegment
 
 router = Router()
 
