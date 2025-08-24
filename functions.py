@@ -2,13 +2,13 @@
 import yt_dlp
 
 # configure yt_dlp
-base_url = 'https://music.youtube.com/watch?v='
+base_url: str = 'https://music.youtube.com/watch?v='
 yt = ytmusicapi.YTMusic()
-cookie_file_path = 'cookies.txt'
+cookie_file_path: str = 'cookies.txt'
 
-# Download audio from YouTube music
+# download audio from YouTube music
 async def download_audio(yt_url, query = 'result') -> None:
-    ydl_opts = {
+    ydl_opts: dict = {
         'cookiefile': cookie_file_path,
         'format': 'bestaudio/best',
         'postprocessors': [{

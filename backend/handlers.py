@@ -45,7 +45,7 @@ async def download_audiofile(message: Message,
         audio_name = f'{hashlib.md5(file_id.encode()).hexdigest()}.mp3'
     file_info = await message.bot.get_file(file_id)
     file_path: str | None = file_info.file_path
-    downloads_path = os.path.join(os.environ['USERPROFILE'], 'Downloads', audio_name)
+    downloads_path: str = os.path.join(os.environ['USERPROFILE'], 'Downloads', audio_name)
     downloaded_file = await message.bot.download_file(file_path)
     with open(downloads_path, 'wb') as f:
         f.write(downloaded_file.getvalue())

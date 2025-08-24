@@ -1,3 +1,6 @@
 ﻿/.venv/
 /config.py
 /cookies.txt
+/ffmpeg.exe
+/ffplay.exe
+/ffprobe.exe
