@@ -1,7 +1,10 @@
 ﻿from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 
 # initialize a browser driver
-driver: WebDriver = webdriver.Firefox()
+options = Options()
+options.add_argument('--headless')
+driver: WebDriver = webdriver.Firefox(options=options)
 
 # navigate to a webpage
 driver.get("!!!well known domain here...!!!")
